@@ -273,7 +273,7 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <div className="flex pt-24 px-4 md:px-8 gap-6 max-w-full overflow-hidden">
+      <div className="flex pt-24 px-4 md:px-8 gap-0 lg:gap-0 max-w-full overflow-hidden">
         {/* Sidebar */}
         <AnimatePresence>
           {isSidebarOpen && (
@@ -287,11 +287,17 @@ export default function Dashboard() {
                 className="fixed inset-0 bg-background/60 backdrop-blur-sm z-[45] lg:hidden"
               />
               <motion.aside 
-                initial={{ x: -300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -300, opacity: 0 }}
-                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className="fixed lg:sticky top-0 lg:top-24 left-0 h-screen lg:h-[calc(100vh-120px)] w-72 lg:w-64 bg-surface-container-low/95 lg:bg-surface-container-low/60 backdrop-blur-2xl lg:backdrop-blur-2xl shadow-2xl border-r lg:border border-outline-variant/10 z-50 lg:z-40 rounded-r-3xl lg:rounded-2xl overflow-hidden"
+                key="sidebar"
+                initial={{ width: 0, opacity: 0, x: -20 }}
+                animate={{ 
+                  width: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 256 : 288, 
+                  opacity: 1, 
+                  x: 0,
+                  marginRight: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 24 : 0
+                }}
+                exit={{ width: 0, opacity: 0, x: -20, marginRight: 0 }}
+                transition={{ type: 'spring', damping: 30, stiffness: 250 }}
+                className="fixed lg:sticky top-0 lg:top-24 left-0 h-screen lg:h-[calc(100vh-120px)] bg-surface-container-low/95 lg:bg-surface-container-low/60 backdrop-blur-2xl lg:backdrop-blur-2xl shadow-2xl border-r lg:border border-outline-variant/10 z-50 lg:z-40 rounded-r-3xl lg:rounded-2xl overflow-hidden shrink-0"
               >
                 <div className="flex flex-col h-full py-8">
                   <div className="px-8 lg:hidden mb-8 flex justify-between items-center">
