@@ -1,6 +1,11 @@
 {
-  "name": "Nocturne",
-  "description": "K-Pop Editorial Feed & Tracker",
+  "name": "NOCTURNE — K-Pop AI Pulse & Bias Hub",
+  "description": "Plataforma editorial de K-Pop com curadoria inteligente via Google Gemini Interactions API (gemini-3.8-flash), Google Search Grounding em tempo real, Structured Outputs e Assistente Multi-Turn com Streaming.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "interactions-api",
+    "google-search-grounding",
+    "structured-outputs",
+    "sse-streaming"
+  ]
 }

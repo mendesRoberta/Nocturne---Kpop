@@ -9,8 +9,14 @@ CREATE TABLE IF NOT EXISTS public.biases (
     age INTEGER,
     trending_song TEXT,
     position TEXT,
+    agency TEXT,
+    bio_summary TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- Safely add new columns if upgrading an existing database
+ALTER TABLE public.biases ADD COLUMN IF NOT EXISTS agency TEXT;
+ALTER TABLE public.biases ADD COLUMN IF NOT EXISTS bio_summary TEXT;
 
 -- Enable Row Level Security
 ALTER TABLE public.biases ENABLE ROW LEVEL SECURITY;

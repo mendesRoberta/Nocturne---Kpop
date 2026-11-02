@@ -13,13 +13,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'NOCTURNE | K-Pop Editorial Feed',
-  description: 'Experience the next generation of K-Pop editorial content.',
+  title: 'NOCTURNE | K-Pop Editorial & Inteligência Artificial',
+  description:
+    'Plataforma editorial de K-Pop com curadoria inteligente via Google Gemini 3.8 Flash, Interactions API, Google Search Grounding e Assistente IA em Streaming.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="pt-BR" className="dark">
       <body
         className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} font-body bg-[#0e0e13] text-[#f9f5fd] antialiased`}
         suppressHydrationWarning
