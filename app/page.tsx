@@ -174,7 +174,7 @@ export default function LoginPage() {
                     Explorar Modo Demo Instantâneo
                   </p>
                   <p className="text-[11px] text-on-surface-variant">
-                    Acesso imediato sem cadastro — ideal para avaliação de portfólio
+                    Acesso imediato sem cadastro
                   </p>
                 </div>
               </div>
@@ -183,8 +183,7 @@ export default function LoginPage() {
           </div>
 
           <div className="relative flex items-center justify-center mb-6">
-            <div className="w-full border-t border-white/10" />
-            <span className="px-3 text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant bg-[#16161d] rounded-full">
+            <span className="px-3 text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant">
               ou acesse sua conta
             </span>
           </div>
